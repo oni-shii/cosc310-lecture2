@@ -57,3 +57,7 @@ def test_removing_an_absent_item_raises():
 
 
 # TODO: add one test of your own. What behaviour is not covered above?
+def test_rejects_zero_quantity():
+    cart=Cart()
+    with pytest.raises(ValueError):
+        cart.add_item(GYOZA, 0)
